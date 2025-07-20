@@ -23,7 +23,7 @@ const PlayerDashboard = () => {
     const fetchEvents = async () => {
       try {
         const res = await fetch(
-          `http://localhost:1337/api/teams?populate[players][populate]=*&populate[matchesAsTeam1][populate][team_1][populate][players][populate]=*&populate[matchesAsTeam1][populate][team_2][populate][players][populate]=*&populate[matchesAsTeam1][populate][winner][populate]=*&populate[matchesAsTeam1][populate][event][populate]=*&populate[matchesAsTeam2][populate][team_1][populate][players][populate]=*&populate[matchesAsTeam2][populate][team_2][populate][players][populate]=*&populate[matchesAsTeam2][populate][winner][populate]=*&populate[matchesAsTeam2][populate][event][populate]=*`
+          `http://https://shx-backend.onrender.com/api/teams?populate[players][populate]=*&populate[matchesAsTeam1][populate][team_1][populate][players][populate]=*&populate[matchesAsTeam1][populate][team_2][populate][players][populate]=*&populate[matchesAsTeam1][populate][winner][populate]=*&populate[matchesAsTeam1][populate][event][populate]=*&populate[matchesAsTeam2][populate][team_1][populate][players][populate]=*&populate[matchesAsTeam2][populate][team_2][populate][players][populate]=*&populate[matchesAsTeam2][populate][winner][populate]=*&populate[matchesAsTeam2][populate][event][populate]=*`
         );
 
         const responseData = await res.json();

@@ -15,7 +15,7 @@ const CoachStats = () => {
     const fetchCoachData = async () => {
       try {
         // ✅ Fetch teams with populated players and matches
-        const res = await fetch(`http://localhost:1337/api/teams?populate=matchesAsTeam1&populate=matchesAsTeam2&populate=players&filters[coachid][id][$eq]=${CoachId}`);
+        const res = await fetch(`http://https://shx-backend.onrender.com/api/teams?populate=matchesAsTeam1&populate=matchesAsTeam2&populate=players&filters[coachid][id][$eq]=${CoachId}`);
         
         const data = await res.json();
         const teamsList = data.data || [];

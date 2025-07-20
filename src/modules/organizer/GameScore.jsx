@@ -12,7 +12,7 @@ const GameScore = () => {
     const fetchEvents = async () => {
       try {
         const res = await fetch(
-          "http://localhost:1337/api/events?populate[matches][populate]=*"
+          "http://https://shx-backend.onrender.com/api/events?populate[matches][populate]=*"
         );
         const data = await res.json();
         const eventsData = data.data;

@@ -62,7 +62,7 @@ const [playerNumber, setPlayerNumber] = useState('');
 
   const fetchTeams = async () => {
     try {
-      const response = await fetch("http://localhost:1337/api/teams?populate=*");
+      const response = await fetch("http://https://shx-backend.onrender.com/api/teams?populate=*");
       const data = await response.json();
       console.log('teamsss',data);
       const teamsByCoach = data.data.filter(
@@ -91,7 +91,7 @@ const [playerNumber, setPlayerNumber] = useState('');
   };
   const fetchPlayerRequests = async (teamId) => {
     try {
-      const response = await fetch(`http://localhost:1337/api/teams?populate=*`);
+      const response = await fetch(`http://https://shx-backend.onrender.com/api/teams?populate=*`);
       const result = await response.json();
   
       // Find the team with the matching ID
@@ -115,7 +115,7 @@ const [playerNumber, setPlayerNumber] = useState('');
   useEffect(() => {
     const fetchPlayers = async () => {
       try {
-        const response = await fetch(`http://localhost:1337/api/players?populate=*&filters[sport][$eq]=${coachSport}&filters[teams][id][$null]=true`);
+        const response = await fetch(`http://https://shx-backend.onrender.com/api/players?populate=*&filters[sport][$eq]=${coachSport}&filters[teams][id][$null]=true`);
       const data = await response.json(); // your service function
       const playerOptions = data.data.map((player) => ({
         label: player.name,

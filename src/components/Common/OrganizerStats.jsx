@@ -17,10 +17,10 @@ const OrganizerStats = ({ activeTab }) => {
       try {
         // Fetch all data
         const [teamsRes, coachesRes, playersRes, matchesRes] = await Promise.all([
-          fetch("http://localhost:1337/api/teams"),
-          fetch("http://localhost:1337/api/coaches"),
-          fetch("http://localhost:1337/api/players"),
-          fetch("http://localhost:1337/api/matches"),
+          fetch("http://https://shx-backend.onrender.com/api/teams"),
+          fetch("http://https://shx-backend.onrender.com/api/coaches"),
+          fetch("http://https://shx-backend.onrender.com/api/players"),
+          fetch("http://https://shx-backend.onrender.com/api/matches"),
         ]);
     
         const [teamsData, coachesData, playersData, matchesData] = await Promise.all([
