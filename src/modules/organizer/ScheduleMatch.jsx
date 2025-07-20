@@ -58,7 +58,7 @@ const [selectedEventVenues, setSelectedEventVenues] = useState([]);
 
     try {
       const response = await fetch(
-        `http://https://shx-backend.onrender.com/api/events?filters[organizer][id][$eq]=${organizerId}`
+        `https://shx-backend.onrender.com/api/events?filters[organizer][id][$eq]=${organizerId}`
       );
       const result = await response.json();
       setEvents(result.data);
@@ -171,7 +171,7 @@ const handleAddVenueField = () => {
 
     try {
       const response = await axios.get(
-        `http://https://shx-backend.onrender.com/api/teams?filters[sport][$eq]=${selected}`
+        `https://shx-backend.onrender.com/api/teams?filters[sport][$eq]=${selected}`
       );
       setTeams(response.data.data);
       console.log("team", response.data.data);
@@ -187,7 +187,7 @@ const handleAddVenueField = () => {
   football: 11,
 };
 const getTeamPlayerCount = async (teamId) => {
-  const res = await fetch(`http://https://shx-backend.onrender.com/api/players?filters[teams][id][$eq]=${teamId}`);
+  const res = await fetch(`https://shx-backend.onrender.com/api/players?filters[teams][id][$eq]=${teamId}`);
   const data = await res.json();
   return data?.data?.length || 0;
 };
@@ -259,7 +259,7 @@ const getTeamPlayerCount = async (teamId) => {
   const fetchMatchesByEvent = async (eventId) => {
     try {
       const response = await axios.get(
-        `http://https://shx-backend.onrender.com/api/matches?filters[event][id][$eq]=${eventId}&populate=*`
+        `https://shx-backend.onrender.com/api/matches?filters[event][id][$eq]=${eventId}&populate=*`
       );
       console.log("matces", response.data.data);
 
@@ -271,7 +271,7 @@ const getTeamPlayerCount = async (teamId) => {
   };
  const handleAddScore = async (match) => {
   try {
-    const response = await axios.get(`http://https://shx-backend.onrender.com/api/matches/?filters[id][$eq]=${match.id}&populate=*`);
+    const response = await axios.get(`https://shx-backend.onrender.com/api/matches/?filters[id][$eq]=${match.id}&populate=*`);
     const matchData = response.data?.data?.[0]; // get first match
 if (!matchData) {
   console.error("Match not found");
@@ -417,7 +417,7 @@ if (team1Score === team2Score) {
             onClick={async () => {
               setSelectedEventId(event.id);
               const response = await axios.get(
-                `http://https://shx-backend.onrender.com/api/events?filters[id][$eq]=${event.id}`
+                `https://shx-backend.onrender.com/api/events?filters[id][$eq]=${event.id}`
               );
               const venues = response.data?.data?.[0]?.venues || [];
               setSelectedEventVenues(venues);

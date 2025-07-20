@@ -13,7 +13,7 @@ const JoinTeam = () => {
       try {
           // ✅ Step 1: Check if player is already in a team
         const playerRes = await fetch(
-          `http://https://shx-backend.onrender.com/api/players?filters[id][$eq]=${playerId}&populate=teams`
+          `https://shx-backend.onrender.com/api/players?filters[id][$eq]=${playerId}&populate=teams`
         );
         const playerData = await playerRes.json();
         const playerTeams = playerData?.data[0].teams || [];
@@ -24,7 +24,7 @@ console.log('ppk',playerTeams);
           return;
         }
         // ✅ Replace with your actual API endpoint or service
-        const response = await fetch("http://https://shx-backend.onrender.com/api/teams?populate=*");
+        const response = await fetch("https://shx-backend.onrender.com/api/teams?populate=*");
         const result = await response.json();
         
         console.log('reee',result.data);

@@ -25,7 +25,7 @@ const ManageCoaches = () => {
   useEffect(() => {
     const fetchCoaches = async () => {
       try {
-        const response = await fetch("http://https://shx-backend.onrender.com/api/coaches");
+        const response = await fetch("https://shx-backend.onrender.com/api/coaches");
         const result = await response.json();
         setCoaches(result.data);
       } catch (error) {
