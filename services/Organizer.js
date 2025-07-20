@@ -2,7 +2,7 @@
 import axios from "axios";
 
 // Set your correct backend URL here
-const BASE_API_URL = "http://localhost:1337/api/organizers"; // Replace with the correct URL
+const BASE_API_URL = `${process.env.REACT_APP_API_URL}/api/organizers`;
 
 // POST request to register an organizer
 export const registerOrganizer = async (data) => {
