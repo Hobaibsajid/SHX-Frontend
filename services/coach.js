@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // Set your correct backend URL here
-const BASE_API_URL = `${process.env.REACT_APP_API_URL}/api/coaches`;
+const BASE_API_URL = "https://shx-backend.onrender.com/api/coaches";
 
 // POST request to register an organizer
 export const registerCoach = async (data) => {
